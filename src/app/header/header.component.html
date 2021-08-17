@@ -1,0 +1,10 @@
+<header>
+  <h2>{{ titulo | uppercase }}</h2>
+  <small> {{ subtitulo }}</small>
+
+  <ul>
+    <li *ngFor="let item of menu">
+      <a href="{{ item.url }}">{{ item.texto }}</a>
+    </li>
+  </ul>
+</header>
