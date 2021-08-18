@@ -15,5 +15,9 @@ export class AppComponent {
     new ReceitaItem(1, "Ovo", "6"),
     new ReceitaItem(1, "Corante", "6ml"),
   ];
-  loading = true;
+  mostrarIngredientes = false;
+
+  exibir() {
+    this.mostrarIngredientes = true;
+  }
 }

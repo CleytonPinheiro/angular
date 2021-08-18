@@ -1,14 +1,18 @@
 <app-header></app-header>
 <div>
   <h1>
-    {{ titulo }}
+    {{ title }}
   </h1>
 
-  <ul>
-    <li *ngFor="let item of itens">{{ item.getLabel() }}</li>
-  </ul>
+  <button (click)="exibir()">Exibir ingredientes</button>
 
-  <p *ngIf="itens.length > 3">Receita possui muitos ingredientes.</p>
+  <div *ngIf="mostrarIngredientes">
+    <ul>
+      <li *ngFor="let item of itens">{{ item.getLabel() }}</li>
+    </ul>
+
+    <p *ngIf="itens.length > 3">Receita possui muitos ingredientes.</p>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
