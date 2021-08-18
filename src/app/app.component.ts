@@ -16,8 +16,15 @@ export class AppComponent {
     new ReceitaItem(1, "Corante", "6ml"),
   ];
   mostrarIngredientes = false;
+  mostrarText = "Exibir ingredientes";
 
   exibir() {
-    this.mostrarIngredientes = true;
+    if (this.mostrarIngredientes) {
+      this.mostrarIngredientes = false;
+      this.mostrarText = "mostrarText";
+    } else {
+      this.mostrarIngredientes = true;
+      this.mostrarText = "Ocultar ingredientes";
+    }
   }
 }
