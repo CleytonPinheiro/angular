@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 
+import { ReceitaItem } from "../components/receita-item";
+
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
@@ -19,6 +21,7 @@ export class HeaderComponent {
         url: "/",
       },
       { texto: "Sobre", url: "/sobre" },
+      { texto: "Contato", url: "/contato" },
     ];
   }
 }
